@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 mongoose.set('debug', true);
 mongoose.Promise = Promise;
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/twitter-clone', {
+mongoose.connect('mongodb://localhost/twitter-clone', {
   keepAlive: true,
   useUnifiedTopology: true,
   useNewUrlParser: true,
