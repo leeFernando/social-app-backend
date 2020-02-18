@@ -1,0 +1,50 @@
+// sign in
+http POST localhost:3001/api/auth/signin password=<password> email=<email>  
+
+// sign up
+http POST localhost:3001/api/auth/signup username=<username> password=<password> email=<email>
+com
+===========================================================================
+// createTweet
+http POST localhost:3001/api/users/:id/tweets "Authorization:Bearer <user token>"  
+text=""
+
+// getTweet
+http GET localhost:3001/api/users/:id/tweets/:tweet_id "Authorization:Bearer <user token>"
+
+// deleteTweet
+http DELETE localhost:3001/api/users/:id/tweets/:tweet_id "Authorization:Bearer <user token>"
+
+// getAllTweet
+http GET localhost:3001/api/tweets "Authorization:Bearer <user token>
+===========================================================================
+// Authorization
+http POST localhost:3001/api/users/:id/tweets "Authorization:Bearer <different user token>"  
+text="" (or the other way round)
+
+OR
+
+- login, then:
+http GET localhost:3001/api/tweets "Authorization:Bearer <different user token>
+
+===========================================================================
+// User Data
+password=secret email=firstuser@test.com
+    "id": "5e467051ec05dc53843a7dc6",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVlNDY3MDUxZWMwNWRjNTM4NDNhN2RjNiIsInVzZXJuYW1lIjoiZmlyc3R1c2VyIiwiaWF0IjoxNTgxNjk0ODYwfQ.q94m0YRFS2pctEDGWCjVYrJKVDuJJr_q0egSvJ08dTM",
+    "username": "firstuser"
+
+password=secret email=seconduser@test.com
+    "id": "5e4681339928e0763051b216",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVlNDY4MTMzOTkyOGUwNzYzMDUxYjIiIsInVzZXJuYW1lIjoic2Vjb25kdXNlciIsImlhdCI6MTU4MTY5MzYyOX0.JerFVw6W6bNEcpDdQF5_gw8iST6nX8XLeyhV98NsA",
+    "username": "seconduser"
+
+password=secret email=user3@test.com
+    "id": "5e46b9a56b4e8f65fc962cee",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVlNDZiOWE1NmI0ZThmNjVmYzk2MmNSIsInVzZXJuYW1lIjoidXNlcjMiLCJpYXQiOjE1ODE2OTMzNDl9.5sGDmgKOoNSAuHiHuieXNp1sbYP7Z2wlb_pdt6d_Q",
+    "username": "user3"  
+
+password=hacker email=hacker@hacker.com
+    "id": "5e46ad12e47c52220497894b",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVlNDZhZDEyZTQ3YzUyMjIwNDk3ODkiIsInVzZXJuYW1lIjoiaGFja2VyIiwiaWF0IjoxNTgxNjkzMjU3fQ.QUbdju2ruBms7XgnyQQlne7iWlzYBFyy3m_3j0asM",
+    "username": "hacker"
