@@ -19,7 +19,7 @@
     "mongoose": "^5.9.0"
   },
   "engines": {
-    "node": ">=0.12"
-  },
-  "engineStrict": true
+    "node": "12.14.1",
+    "npm": "6.13.7"
+  }
 }
